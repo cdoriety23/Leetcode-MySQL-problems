@@ -1,0 +1,26 @@
+LeetCode MySQL problems
+
+Question 1: 
+Given a table salary, such as the one below, that has m=male and f=female values. Swap all f and m values (i.e., change all f values to m and vice versa) with a single update statement and no intermediate temp table.
+Note that you must write a single update statement, DO NOT write any select statement for this problem.
+
+# Write your MySQL query statement below
+Update salary 
+Set sex =  If(sex = 'm', 'f', 'm');
+
+Question 2:
+Given a table World .A country is big if it has an area of bigger than 3 million square km or a population of more than 25 million.
+Write a SQL solution to output big countries' name, population and area.
+
+# Write your MySQL query statement below
+Select name, population, area from World
+    where population > 25000000 or area > 3000000;
+
+Question 3: 
+X city opened a new cinema, many people would like to go to this cinema. The cinema also gives out a poster indicating the movies’ ratings and descriptions.
+Please write a SQL query to output movies with an odd numbered ID and a description that is not 'boring'. Order the result by rating.
+
+# Write your MySQL query statement below
+Select * from cinema 
+where mod(id,2)=1 and description != 'boring'
+order by rating DESC;
