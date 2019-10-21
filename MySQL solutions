@@ -26,3 +26,12 @@ Please write a SQL query to output movies with an odd numbered ID and a descript
 Select * from cinema 
 where mod(id,2)=1 and description != 'boring'
 order by rating DESC;
+
+
+Question 4:
+Write a SQL query to find all duplicate emails in a table named Person.
+
+Select Email 
+from Person
+group BY Email
+having count(Email) > 1;
